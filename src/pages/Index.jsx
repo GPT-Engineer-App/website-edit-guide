@@ -1,7 +1,11 @@
 import { Container, Text, VStack, Box, Heading, Button, HStack, IconButton, Image, SimpleGrid, Flex, Avatar, Stack, Input, Textarea, FormControl, FormLabel } from "@chakra-ui/react";
+import { useCallback } from "react";
 import { FaShieldAlt, FaSearch, FaClipboardCheck, FaExclamationTriangle, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
+  const handleButtonClick = useCallback((label) => {
+    console.log(`Button clicked: ${label}`);
+  }, []);
   return (
     <Container maxW="container.xl" p={4}>
       {/* Main Banner */}
@@ -13,10 +17,10 @@ const Index = () => {
           </Heading>
           <Text fontSize="xl">Expert Cybersecurity Services & Training Solutions</Text>
           <HStack spacing={4}>
-            <Button colorScheme="teal" size="lg">
+            <Button colorScheme="teal" size="lg" onClick={() => handleButtonClick("Learn More")}>
               Learn More
             </Button>
-            <Button colorScheme="orange" size="lg">
+            <Button colorScheme="orange" size="lg" onClick={() => handleButtonClick("Get Started")}>
               Get Started
             </Button>
           </HStack>
@@ -35,7 +39,7 @@ const Index = () => {
               Penetration Testing
             </Heading>
             <Text>Simulate real-world attacks to identify vulnerabilities.</Text>
-            <Button mt={4} colorScheme="teal">
+            <Button mt={4} colorScheme="teal" onClick={() => handleButtonClick("Learn More - Penetration Testing")}>
               Learn More
             </Button>
           </Box>
@@ -45,7 +49,7 @@ const Index = () => {
               Vulnerability Assessment
             </Heading>
             <Text>Identify and address potential security weaknesses.</Text>
-            <Button mt={4} colorScheme="teal">
+            <Button mt={4} colorScheme="teal" onClick={() => handleButtonClick("Learn More - Vulnerability Assessment")}>
               Learn More
             </Button>
           </Box>
@@ -55,7 +59,7 @@ const Index = () => {
               Security Audits
             </Heading>
             <Text>Comprehensive reviews of your security posture.</Text>
-            <Button mt={4} colorScheme="teal">
+            <Button mt={4} colorScheme="teal" onClick={() => handleButtonClick("Learn More - Security Audits")}>
               Learn More
             </Button>
           </Box>
@@ -65,7 +69,7 @@ const Index = () => {
               Incident Response
             </Heading>
             <Text>Rapid action plans to mitigate cyber incidents.</Text>
-            <Button mt={4} colorScheme="teal">
+            <Button mt={4} colorScheme="teal" onClick={() => handleButtonClick("Learn More - Incident Response")}>
               Learn More
             </Button>
           </Box>
@@ -148,7 +152,7 @@ const Index = () => {
                 <FormLabel>Message</FormLabel>
                 <Textarea />
               </FormControl>
-              <Button colorScheme="teal" size="lg">
+              <Button colorScheme="teal" size="lg" onClick={() => handleButtonClick("Submit")}>
                 Submit
               </Button>
             </Stack>
