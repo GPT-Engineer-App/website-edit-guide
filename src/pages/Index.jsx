@@ -19,7 +19,7 @@ const Index = () => {
       {/* Main Banner */}
       <Box bg="gray.800" color="white" py={20} textAlign="center">
         <VStack spacing={4}>
-          <Image src="https://images.unsplash.com/photo-1555399784-17946f55db19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwYmFubmVyfGVufDB8fHx8MTcxNzY2Njg0NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Cybersecurity Banner" boxSize="300px" />
+          <Image src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwc2hpZWxkfGVufDB8fHx8MTcxNzY2Njg0NHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Cybersecurity Shield" boxSize="300px" />
           <Heading as="h1" size="2xl">
             Securing Your Digital World
           </Heading>
