@@ -1,11 +1,19 @@
 import { Container, Text, VStack, Box, Heading, Button, HStack, IconButton, Image, SimpleGrid, Flex, Avatar, Stack, Input, Textarea, FormControl, FormLabel } from "@chakra-ui/react";
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaShieldAlt, FaSearch, FaClipboardCheck, FaExclamationTriangle, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
-  const handleButtonClick = useCallback((label) => {
-    console.log(`Button clicked: ${label}`);
-  }, []);
+  const navigate = useNavigate();
+  const handleButtonClick = useCallback(
+    (label) => {
+      if (label === "Learn More") {
+        navigate("/learn-more");
+      } else if (label === "Get Started") {
+      }
+    },
+    [navigate],
+  );
   return (
     <Container maxW="container.xl" p={4}>
       {/* Main Banner */}
